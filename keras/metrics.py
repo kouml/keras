@@ -24,7 +24,7 @@ from .utils.generic_utils import serialize_keras_object
 
 
 def binary_accuracy(y_true, y_pred):
-    return K.mean(K.equal(y_true, K.round(y_pred)), axis=-1)
+    return K.equal(y_true, K.round(y_pred))
 
 
 def categorical_accuracy(y_true, y_pred):
